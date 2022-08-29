@@ -65,7 +65,7 @@ data:
     name: CocoDataset
     img_path: datasets/teabuds-close
     ann_path: datasets/teabuds-close/train.json
-    input_size: [416,416] #[w,h]
+    input_size: [320, 320] #[w,h]
     keep_ratio: False
     pipeline:
       perspective: 0.0
@@ -113,6 +113,6 @@ evaluator:
   name: CocoDetectionEvaluator
   save_key: mAP
 log:
-  interval: 31
+  interval: 50
 
 class_names: ['One leaf/bud']
