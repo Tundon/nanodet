@@ -63,8 +63,8 @@ model:
 data:
   train:
     name: CocoDataset
-    img_path: coco/train2017
-    ann_path: coco/annotations/instances_train2017.json
+    img_path: datasets/coco/train2017
+    ann_path: datasets/coco/annotations/instances_train2017.json
     input_size: [416,416] #[w,h]
     keep_ratio: False
     pipeline:
@@ -81,8 +81,8 @@ data:
       normalize: [[103.53, 116.28, 123.675], [57.375, 57.12, 58.395]]
   val:
     name: CocoDataset
-    img_path: coco/val2017
-    ann_path: coco/annotations/instances_val2017.json
+    img_path: datasets/coco/val2017
+    ann_path: datasets/coco/annotations/instances_val2017.json
     input_size: [416,416] #[w,h]
     keep_ratio: False
     pipeline:
@@ -102,12 +102,12 @@ schedule:
     name: linear
     steps: 500
     ratio: 0.0001
-  total_epochs: 300
+  total_epochs: 30
   lr_schedule:
     name: CosineAnnealingLR
     T_max: 300
     eta_min: 0.00005
-  val_intervals: 10
+  val_intervals: 1
 grad_clip: 35
 evaluator:
   name: CocoDetectionEvaluator
