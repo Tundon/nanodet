@@ -86,7 +86,7 @@ def get_image_list(path):
         for filename in file_name_list:
             apath = os.path.join(maindir, filename)
             ext = os.path.splitext(apath)[1]
-            if ext in image_ext:
+            if ext.lower() in image_ext:
                 image_names.append(apath)
     return image_names
 
