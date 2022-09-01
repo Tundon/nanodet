@@ -118,6 +118,6 @@ work_dirs/
 *.py~
 *.sh~
 
-coco/
+coco
 workspace/
 datasets/
