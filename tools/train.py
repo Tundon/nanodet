@@ -95,6 +95,9 @@ def main(args):
     logger.info("Creating model...")
     task = TrainingTask(cfg, evaluator)
 
+    with open(os.path.join(cfg.save_dir, "model.txt"), "w") as f:
+        f.write(repr(task.model))
+
     if "load_model" in cfg.schedule:
         ckpt = torch.load(cfg.schedule.load_model)
         if "pytorch-lightning_version" not in ckpt:
