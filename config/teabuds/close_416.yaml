@@ -63,8 +63,8 @@ model:
 data:
   train:
     name: CocoDataset
-    img_path: datasets/teabuds-close/train
-    ann_path: datasets/teabuds-close/train/instances.json
+    img_path: datasets/teabuds/train
+    ann_path: datasets/teabuds/train/instances.json
     input_size: [416,416] #[w,h]
     keep_ratio: False
     pipeline:
@@ -81,8 +81,8 @@ data:
       normalize: [[103.53, 116.28, 123.675], [57.375, 57.12, 58.395]]
   val:
     name: CocoDataset
-    img_path: datasets/teabuds-close/val
-    ann_path: datasets/teabuds-close/val/instances.json
+    img_path: datasets/teabuds/val
+    ann_path: datasets/teabuds/val/instances.json
     input_size: [416,416] #[w,h]
     keep_ratio: False
     pipeline:
@@ -115,4 +115,4 @@ evaluator:
 log:
   interval: 31
 
-class_names: ['One leaf/bud']
+class_names: ['One leaf bud']

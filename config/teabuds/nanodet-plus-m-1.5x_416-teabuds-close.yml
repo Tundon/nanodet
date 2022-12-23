@@ -1,10 +1,10 @@
-# nanodet-plus-m-1.5x_416
-# COCO mAP(0.5:0.95) = 0.341
-#             AP_50  = 0.506
-#             AP_75  = 0.357
-#           AP_small = 0.143
-#               AP_m = 0.363
-#               AP_l = 0.539
+# nanodet/config/teabuds/nanodet-plus-m-1.5x_416-teabuds-close.yml
+# COCO mAP(0.5:0.95) = 0.537
+#             AP_50  = 0.800
+#             AP_75  = 0.653
+#           AP_small = -1.000
+#               AP_m = 0.135
+#               AP_l = 0.550
 save_dir: workspace/teabuds/nanodet-plus-m-1.5x_416
 model:
   weight_averager:
@@ -63,8 +63,8 @@ model:
 data:
   train:
     name: CocoDataset
-    img_path: datasets/teabuds-close/train
-    ann_path: datasets/teabuds-close/train/instances.json
+    img_path: datasets/teabuds/train
+    ann_path: datasets/teabuds/train/instances.json
     input_size: [416,416] #[w,h]
     keep_ratio: False
     pipeline:
@@ -81,8 +81,8 @@ data:
       normalize: [[103.53, 116.28, 123.675], [57.375, 57.12, 58.395]]
   val:
     name: CocoDataset
-    img_path: datasets/teabuds-close/val
-    ann_path: datasets/teabuds-close/val/instances.json
+    img_path: datasets/teabuds/val
+    ann_path: datasets/teabuds/val/instances.json
     input_size: [416,416] #[w,h]
     keep_ratio: False
     pipeline:
@@ -115,4 +115,4 @@ evaluator:
 log:
   interval: 5
 
-class_names: ['One leaf/bud']
+class_names: ['One leaf bud']
