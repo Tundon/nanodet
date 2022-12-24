@@ -5,6 +5,14 @@
 #           AP_small = -1.000
 #               AP_m = 0.135
 #               AP_l = 0.550
+# 
+# Far sight teabuds
+# AP    20.4
+# AP50  40.4
+# AP75  19.2
+# APs   12.3
+# APm   24.0
+# APl   11.9
 save_dir: workspace/teabuds/nanodet-plus-m-1.5x_416
 model:
   weight_averager:
